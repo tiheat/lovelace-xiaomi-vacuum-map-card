@@ -13,7 +13,15 @@
         "vacuum_clean_segment": "Quartos",
         "vacuum_clean_zone": "Limpar zona",
         "vacuum_clean_zone_predefined": "Lista de zonas",
-        "vacuum_follow_path": "Seguir caminho"
+        "vacuum_follow_path": "Seguir caminho",
+        "vacuum_edit_merge_rooms": "Juntar cômodos",
+        "vacuum_edit_split_room": "Dividir cômodo",
+        "vacuum_edit_hide_rooms": "Ocultar cômodos",
+        "vacuum_edit_no_go_zone": "Zona proibida",
+        "vacuum_edit_no_mop_zone": "Zona sem mop",
+        "vacuum_edit_virtual_wall": "Parede virtual",
+        "vacuum_edit_carpet": "Tapete",
+        "vacuum_edit_remove": "Apagar objeto"
     },
     "validation": {
         "preset": {
