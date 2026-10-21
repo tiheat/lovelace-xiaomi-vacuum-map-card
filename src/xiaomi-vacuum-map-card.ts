@@ -753,9 +753,12 @@ export class XiaomiVacuumMapCard extends LitElement {
                     .map(s => s.state_entity as string);
                 break;
             case SelectionType.ROOM:
-                this.selectableRooms = newMode.predefinedSelections.map(
-                    ps => new Room(ps as RoomConfig, this._getContext()),
-                );
+                // Without configured rooms, read them from the camera so they follow map edits
+                const roomConfigs =
+                    newMode.predefinedSelections.length > 0
+                        ? newMode.predefinedSelections
+                        : (this._getRoomsConfig()?.rooms ?? []);
+                this.selectableRooms = roomConfigs.map(ps => new Room(ps as RoomConfig, this._getContext()));
                 this.selectedRooms = this.selectableRooms.filter(s => s.selected);
                 this.entitiesToManuallyUpdate = newMode.predefinedSelections
                     .filter(s => s.state_entity)
