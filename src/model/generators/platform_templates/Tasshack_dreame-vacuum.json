@@ -145,6 +145,138 @@
                         "entity_id": "[[entity_id]]"
                     }
                 }
+            },
+            "vacuum_edit_merge_rooms": {
+                "name": "map_mode.vacuum_edit_merge_rooms",
+                "icon": "mdi:set-merge",
+                "selection_type": "ROOM",
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 2,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_merge_segments",
+                    "service_data": {
+                        "segments": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_split_room": {
+                "name": "map_mode.vacuum_edit_split_room",
+                "icon": "mdi:call-split",
+                "selection_type": "MANUAL_PATH",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 2,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_split_segments",
+                    "service_data": {
+                        "line": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_hide_rooms": {
+                "name": "map_mode.vacuum_edit_hide_rooms",
+                "icon": "mdi:eye-off",
+                "selection_type": "ROOM",
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 60,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_hide_segments",
+                    "service_data": {
+                        "segments": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_no_go_zone": {
+                "name": "map_mode.vacuum_edit_no_go_zone",
+                "icon": "mdi:cancel",
+                "selection_type": "MANUAL_RECTANGLE",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 20,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_add_restricted_zone",
+                    "service_data": {
+                        "zones": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_no_mop_zone": {
+                "name": "map_mode.vacuum_edit_no_mop_zone",
+                "icon": "mdi:water-off",
+                "selection_type": "MANUAL_RECTANGLE",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 20,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_add_restricted_zone",
+                    "service_data": {
+                        "no_mops": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_virtual_wall": {
+                "name": "map_mode.vacuum_edit_virtual_wall",
+                "icon": "mdi:wall",
+                "selection_type": "MANUAL_PATH",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 20,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_add_restricted_zone",
+                    "service_data": {
+                        "walls": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_carpet": {
+                "name": "map_mode.vacuum_edit_carpet",
+                "icon": "mdi:rug",
+                "selection_type": "MANUAL_RECTANGLE",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 20,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_add_carpet_area",
+                    "service_data": {
+                        "carpets": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
+            },
+            "vacuum_edit_remove": {
+                "name": "map_mode.vacuum_edit_remove",
+                "icon": "mdi:eraser",
+                "selection_type": "MANUAL_POINT",
+                "coordinates_rounding": true,
+                "coordinates_to_meters_divider": 1000,
+                "repeats_type": "NONE",
+                "max_repeats": 0,
+                "max_selections": 1,
+                "service_call_schema": {
+                    "service": "dreame_vacuum.vacuum_remove_map_objects",
+                    "service_data": {
+                        "points": "[[selection]]",
+                        "entity_id": "[[entity_id]]"
+                    }
+                }
             }
         }
     },

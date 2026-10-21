@@ -15,7 +15,15 @@
         "vacuum_clean_point_predefined": "Pontos",
         "vacuum_clean_zone": "Limpeza de zona",
         "vacuum_clean_zone_predefined": "Lista de zonas",
-        "vacuum_follow_path": "Caminho"
+        "vacuum_follow_path": "Caminho",
+        "vacuum_edit_merge_rooms": "Juntar divisões",
+        "vacuum_edit_split_room": "Dividir divisão",
+        "vacuum_edit_hide_rooms": "Ocultar divisões",
+        "vacuum_edit_no_go_zone": "Zona proibida",
+        "vacuum_edit_no_mop_zone": "Zona sem esfregona",
+        "vacuum_edit_virtual_wall": "Parede virtual",
+        "vacuum_edit_carpet": "Tapete",
+        "vacuum_edit_remove": "Apagar objeto"
     },
     "validation": {
         "preset": {
